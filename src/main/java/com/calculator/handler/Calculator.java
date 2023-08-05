@@ -47,6 +47,8 @@ public class Calculator {
         curTotal = curTotal == null ? BigDecimal.ZERO : curTotal;
         undoStack.add(curTotal);
         curTotal = calcTwoNum(curTotal, newNum, operator);
+
+        redoStack.clear();
         return 1;
     }
 
